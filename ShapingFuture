@@ -1,0 +1,20 @@
+# Shaping the future with java faster
+
+  - Java 10 release
+   - Tools
+    - Java mission control - More tracing functionlaity -  https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr002.html
+    - Java flight recorder- Agent for storing profiling data: https://docs.oracle.com/javacomponents/jmc-5-4/jfr-runtime-guide/about.htm#JFRUH170
+    - Application Class Data SHaring - Shared data across different apps- https://docs.oracle.com/javase/8/docs/technotes/guides/vm/class-data-sharing.html
+   - Type inference
+   - Garbage Collection- 
+     - ZGC
+       - GC Pause times not exceeding 10ms
+   - Java 11 Planned
+     - Object data layout
+       - Optimizing data object storage
+       - Issue: Object indentity 
+       - Project Vallaha- Value types
+      - JNI
+        - Project Panama- Safer and faster JNI
+        - Project Loom - lightweight thread and continuation
+           - 
