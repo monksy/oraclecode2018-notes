@@ -1,0 +1,5 @@
+#!/bin/bash
+
+wget 
+http://repo.scalabench.org/snapshots/org/scalabench/benchmarks/scala-benchmark-suite/0.1.0-SNAPSHOT/scala-benchmark-suite-0.1.0-20110410.175024-1.jar
+
