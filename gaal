@@ -1,0 +1,66 @@
+# Graal Compiler
+
+   - Speaker: @christhalinger / #twittervmteam	
+     - Working on the jvm for 13 years, oracle hotspot compiler team
+     - Invoke dynamic guy
+   - JIT Compiler
+    - http://github.com/oracle/graal
+   - Uses the java virtual machine com[iler interface (JVMCI)
+   - Written in Java
+   - Where do you get it: JEP-295- Ahead of time Compiliation
+   
+Miscoptions
+
+export JAVA_TOOL_OPTIONS="-XX:+UseParallelGC -Xmx512m -Xms512m"
+
+java --describe-module jdk.aot
+  - Requires jdk.internal.vm.compiler
+    - you have graal
+
+openjdk.java.net/jeps/243
+
+Unlock
+
+ -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -XX:+UseJVMCICompiler -Djvmci.Compiler=<name 
+ of compiler>
+
+ Scala benchmark
+
+ java -ar scalabench* -s small avrora 
+
+ Bootstrapping: 
+   - java bytecode
+   - It loads javasclasses
+   - Java application runnining in your vm
+   - At some point these classes need to be compiled
+
+ java -XX:+BootstrapJVMCI -version
+
+Biggest difference
+--------------
+
+Java heap usage 
+
+  - Compiling application methods will use javaheap memory
+  - Graal methods possibly too
+  - CompileGraalWithC1Only
+  
+java -jar -Xlog:gc -jar scala-benchmark-suite-0.1.0-20110410.175024-1.jar -s small -n 3 avrora
+
+
+What we learned
+---------------
+
+ - Graal uses java heap memory
+   - No heap isolation yet
+ - Most memory usage during startup 
+ - Memory is used anyway
+  - either malloc or javaheap
+
+	 
+ 
+Questions that I have
+ ---------------
+
+How well does this integrate with Scala?
+
