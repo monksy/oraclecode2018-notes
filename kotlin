@@ -1,0 +1,34 @@
+Kotlin 
+
+  - Late presentation
+  - Smart casting, and when== switch statement
+  - 
+
+  fun generateRandomNumber: Int { return 4 } 
+  Named function parameters
+  Default parameter values
+  Has higher order functions
+
+  Has monkey patching Int.isEven = 
+
+  Has companon objects 
+  Supports tell recursion
+
+  Has compomanion objects
+
+  Very groovy and scala like
+
+  it in closure
+
+  Refified generics
+
+   \/ C++ inline \/ while I'm there also put this in there too
+  inline fun <refified T> loggerOf():Logger = Logger.getLogger(T::class.java)
+  
+ Questions
+ -----------
+
+ Monkey patching, how much can we extend, how does that work underneith and can that be used 
+ for mocks?
+
+
